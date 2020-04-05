@@ -17,7 +17,31 @@
 
 <div id="content">
     <div class="container" id="about">
-    {{ setting.contact | safe }}
+        <div class="row">
+            <div class="col-md-4">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+
+                {% endif %}
+                    <h3><b>Contact Form</b> </h3>
+                    <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+
+            <h3><b>Contact Informations</b> </h3>
+            <div class="col-md-8">
+                {{ setting.contact |safe }}
+            </div>
+
+
+        </div>
     </div>
 </div>
 {% endblock %}
