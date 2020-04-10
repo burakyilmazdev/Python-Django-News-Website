@@ -21,11 +21,15 @@ def index(request):
 
 def aboutus(request):
     setting = Setting.objects.get(pk=1)
-    context = {'setting': setting, 'page': 'aboutus'}
+    category = Category.objects.all()
+    context = {'setting': setting,
+               'page': 'aboutus',
+               'category': category}
     return render(request, 'aboutus.html', context)
 
 
 def contact(request):
+    category = Category.objects.all()
     if request.method == 'POST':
         form = ContactFormu(request.POST)
         if form.is_valid():
@@ -41,5 +45,7 @@ def contact(request):
 
     setting = Setting.objects.get(pk=1)
     form = ContactFormu()
-    context = {'setting': setting, 'form': form}
+    context = {'setting': setting,
+               'form': form,
+               'category': category}
     return render(request, 'contact.html', context)
