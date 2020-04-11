@@ -1,0 +1,50 @@
+{% extends "homebase.html" %}
+
+{%  block title %}{{categorydata.title}}{% endblock %}
+{%  block keywords %}{% endblock %}
+{%  block description %}{% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" type='image/x-icon' href='{{ setting.icon.url }}'/>
+{% endblock %}
+
+{% load static %}
+{% block content %}
+
+    <div id="content">
+        <div class="container" id="about">
+
+            <div class="mission text-center block block-pd-sm block-bg-noise">
+                <div class="container">
+
+
+                    <div class="item-carousel" data-toggle="owlcarousel" data-owlcarousel-settings='{"items":4, "pagination":false, "navigation":true, "itemsScaleUp":true}'>
+
+                        {% for rs in news %}
+                            <div class="item">
+                                <a href="#" class="overlay-wrapper">
+                                   <img src="{{rs.image.url}}" alt="Project 1 image" class="img-responsive underlay">
+                                    <span class="overlay">
+                  <span class="overlay-content"> <span class="h4">{{rs.title}}</span> </span>
+                </span>
+                                </a>
+                                <div class="item-details bg-noise">
+                                    <h4 class="item-title">
+                                        <a href="#">{{rs.title}}</a>
+                                    </h4>
+                                    <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Haberi oku</a>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+{% endblock %}
