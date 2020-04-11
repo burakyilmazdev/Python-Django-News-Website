@@ -1,64 +1,6 @@
 {% load static %}
 <div id="background-wrapper" class="buildings" data-stellar-background-ratio="0.1">
-
-    <!-- ======== @Region: #navigation ======== -->
-    <div id="navigation" class="wrapper">
-        <!--Hidden Header Region-->
-        <div class="header-hidden collapse">
-            <div class="header-hidden-inner container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <h3>
-                            About Us
-                        </h3>
-                        <p>DENEME Flexor is a super flexible responsive theme with a modest design touch.</p>
-                        <a href="about.html" class="btn btn-more"><i class="fa fa-plus"></i> Learn more</a>
-                    </div>
-                    <div class="col-md-3">
-                        <!--@todo: replace with company contact details-->
-                        <h3>
-                            Contact Us
-                        </h3>
-                        <address>
-                            <strong>Flexor Bootstrap Theme Inc</strong>
-                            <abbr title="Address"><i class="fa fa-pushpin"></i></abbr>
-                            Sunshine House, Sunville. SUN12 8LU.
-                            <br>
-                            <abbr title="Phone"><i class="fa fa-phone"></i></abbr>
-                            019223 8092344
-                            <br>
-                            <abbr title="Email"><i class="fa fa-envelope-alt"></i></abbr>
-                            info@flexorinc.com
-                        </address>
-                    </div>
-                    <div class="col-md-6">
-                        <!--Colour & Background Switch for demo - @todo: remove in production-->
-                        <h3>
-                            Theme Variations
-                        </h3>
-                        <div class="switcher">
-                            <div class="cols">
-                                Backgrounds:
-                                <br>
-                                <a href="#benches" class="background benches active" title="Benches">Benches</a> <a href="#boots" class="background boots " title="Boots">Boots</a> <a href="#buildings" class="background buildings " title="Buildings">Buildings</a>
-                                <a
-                                        href="#city" class="background city " title="City">City</a> <a href="#metro" class="background metro " title="Metro">Metro</a>
-                            </div>
-                            <div class="cols">
-                                Colours:
-                                <br>
-                                <a href="#orange" class="colour orange active" title="Orange">Orange</a> <a href="#green" class="colour green " title="Green">Green</a> <a href="#blue" class="colour blue " title="Blue">Blue</a> <a href="#lavender" class="colour lavender "
-                                                                                                                                                                                                                                      title="Lavender">Lavender</a>
-                            </div>
-                        </div>
-                        <p>
-                            <small>Selection is not persistent.</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Header & navbar-branding region-->
+    <!--Header & navbar-branding region-->
         <div class="header">
             <div class="header-inner container">
                 <div class="row">
@@ -115,7 +57,7 @@
 
                                     {% recursetree category %}
 
-                                        <li><a href="/category/{{ node.slug }}" tabindex="-1" class="menu-item">{{ node.title }}</a></li>
+                                        <li><a href="/category/{{ node.id }}/{{ node.slug }}" tabindex="-1" class="menu-item">{{ node.title }}</a></li>
 
                                             {% if not node.is_leaf_node %}
                                                 <ul class="children">
