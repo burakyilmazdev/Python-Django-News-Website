@@ -1,0 +1,25 @@
+{% extends "homebase.html" %}
+
+{%  block title %}{{news.title}}{% endblock %}
+{%  block keywords %}{{news.keywords}}{% endblock %}
+{%  block description %}{{news.description}}{% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" type='image/x-icon' href='{{ setting.icon.url }}'/>
+{% endblock %}
+
+
+{% block content %}
+
+<div id="content">
+    <div class="container" id="about">
+<h2><b>{{ news.title }}</b></h2><br><br>
+{{ news.detail | safe}}<br><br>
+
+
+{% for rs in images %}
+<img src="{{ rs.image.url }}"><br>
+{% endfor %}
+    </div>
+</div>
+{% endblock %}
