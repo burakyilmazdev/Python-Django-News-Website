@@ -9,13 +9,17 @@ from news.models import News, Category
 
 def index(request):
     setting = Setting.objects.get(pk=1)
-    sliderdata = News.objects.all()[:4]
+    sliderdata = News.objects.all()[:6]
     category = Category.objects.all()
+    lastnews = News.objects.all().order_by('-id')[:4]
+    randomnews = News.objects.all().order_by('?')[:4]
 
     context = {'setting': setting,
                'category': category,
                'page': 'home',
-               'sliderdata': sliderdata}
+               'sliderdata': sliderdata,
+               'lastnews': lastnews,
+               'randomnews': randomnews}
     return render(request, 'index.html', context)
 
 
