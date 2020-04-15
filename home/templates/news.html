@@ -22,7 +22,7 @@
 
                         {% for rs in news %}
                             <div class="item">
-                                <a href="#" class="overlay-wrapper">
+                                <a href="/news/{{ rs.id }}/{{ rs.slug }}" class="overlay-wrapper">
                                    <img src="{{rs.image.url}}" alt="Project 1 image" class="img-responsive underlay">
                                     <span class="overlay">
                   <span class="overlay-content"> <span class="h4">{{rs.title}}</span> </span>
@@ -30,9 +30,9 @@
                                 </a>
                                 <div class="item-details bg-noise">
                                     <h4 class="item-title">
-                                        <a href="#">{{rs.title}}</a>
+                                        <a href="/news/{{ rs.id }}/{{ rs.slug }}">{{rs.title}}</a>
                                     </h4>
-                                    <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Haberi oku</a>
+                                    <a href="/news/{{ rs.id }}/{{ rs.slug }}" class="btn btn-more"><i class="fa fa-plus"></i>Haberi oku</a>
                                 </div>
                             </div>
 
