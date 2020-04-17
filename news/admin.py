@@ -5,7 +5,7 @@ from django.utils.html import format_html
 from mptt.admin import MPTTModelAdmin, DraggableMPTTAdmin
 
 import news
-from news.models import Category, News, Images
+from news.models import Category, News, Images,Comments
 
 
 class NewsImageInline(admin.TabularInline):
@@ -67,6 +67,12 @@ class CategoryAdmin2(DraggableMPTTAdmin):
     related_products_cumulative_count.short_description = 'Related products (in tree)'
 
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ['subject', 'comment', 'news', 'user', 'status']
+    list_filter = ['status']
+
+
 admin.site.register(Category, CategoryAdmin2)
 admin.site.register(News, NewsAdmin)
 admin.site.register(Images, ImagesAdmin)
+admin.site.register(Comments, CommentAdmin)

@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from home.models import Setting, ContactFormu, ContactFormMessage
-from news.models import News, Category, Images
+from news.models import News, Category, Images, Comments
 
 
 def index(request):
@@ -70,7 +70,9 @@ def news_detail(request, id, slug):
     category = Category.objects.all()
     news = News.objects.get(pk=id)
     images = Images.objects.filter(news_id=id)
+    comments = Comments.objects.filter(news_id=id,status='True')
     context = {'news': news,
                'category': category,
-               'images': images}
+               'images': images,
+               'comments': comments}
     return render(request, 'news_detail.html', context)

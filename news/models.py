@@ -1,7 +1,8 @@
+from django.contrib.auth.models import User
 from django.db import models
 
-
 # Create your models here.
+from django.forms import ModelForm, TextInput, Textarea
 from django.utils.safestring import mark_safe
 from ckeditor_uploader.fields import RichTextUploadingField
 from mptt.fields import TreeForeignKey
@@ -15,9 +16,9 @@ class Category(MPTTModel):
 
     )
 
-    title = models.CharField(blank=True,max_length=100)
-    keywords = models.CharField(blank=True,max_length=255)
-    description = models.CharField(blank=True,max_length=255)
+    title = models.CharField(blank=True, max_length=100)
+    keywords = models.CharField(blank=True, max_length=255)
+    description = models.CharField(blank=True, max_length=255)
     image = models.ImageField(blank=True, upload_to='images/')
     status = models.CharField(max_length=10, choices=STATUS)
 
@@ -27,9 +28,7 @@ class Category(MPTTModel):
     update_at = models.DateTimeField(auto_now=True)
 
     class MPTTMeta:
-
         order_insertion_by = ['title']
-
 
     def __str__(self):
         full_path = [self.title]
@@ -52,8 +51,8 @@ class News(models.Model):
     )
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=150)
-    keywords = models.CharField(blank=True,max_length=255)
-    description = models.CharField(blank=True,max_length=255)
+    keywords = models.CharField(blank=True, max_length=255)
+    description = models.CharField(blank=True, max_length=255)
     image = models.ImageField(blank=True, upload_to='images/')
     slug = models.SlugField(blank=True, max_length=150)
     detail = RichTextUploadingField()
@@ -82,3 +81,29 @@ class Images(models.Model):
         return mark_safe('<img src="{}" height="50"/>'.format(self.image.url))
 
     image_tag.short_description = 'Image'
+
+
+class Comments(models.Model):
+    STATUS = (
+        ('True', 'Evet'),
+        ('New', 'Yeni'),
+        ('False', 'Hayır'),
+
+    )
+    news = models.ForeignKey(News, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    subject = models.CharField(max_length=200)
+    comment = models.TextField(max_length=200, blank=True)
+    status = models.CharField(max_length=10, choices=STATUS, default='New')
+    ip = models.CharField(blank=True, max_length=20)
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now_add=True)
+
+    def _str_(self):
+        return self.subject
+
+
+class CommentFormu(ModelForm):
+    class Meta:
+        model = Comments
+        fields = ['subject', 'comment']
