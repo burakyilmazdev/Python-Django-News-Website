@@ -1,0 +1,38 @@
+{% extends "homebase.html" %}
+
+{%  block title %}About us{% endblock %}
+{%  block keywords %}{{setting.keywords}}{% endblock %}
+{%  block description %}{{setting.description}}{% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" type='image/x-icon' href='{{ setting.icon.url }}'/>
+{% endblock %}
+
+
+{% block content %}
+
+    <div id="content">
+        <div class="container" id="about">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>News name</th>
+                    <th>Category</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for rs in news %}
+                    <tr>
+                        <td><a href="/news/{{ rs.id}}/{{ rs.slug }}"><img src="{{ rs.image.url }}" style="..." alt="" height="150" width="150"></a></td>
+                        <td><h4 class="news-name"><a href="/news/{{ rs.id }}/{{ rs.slug }}">{{ rs.title }}</a> </h4> </td>
+                        <td><a href="/category/{{ rs.category_id }}/{{ rs.category.slug }}">{{ rs.category }}</a> </td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -101,6 +101,13 @@
                                 </li>
                             </ul>
                         </li>
+                    <li>
+                    <form action="/search/" method="post">
+                        {% csrf_token %}
+                        <input name="query" class="input search-input" type="text" placeholder="arama yap">
+                        <button class="search-btn"><i class="fa fa-search"></i> </button>
+                    </form>
+                    </li>
                     </ul>
                 </div>
                 <!--/.navbar-collapse -->

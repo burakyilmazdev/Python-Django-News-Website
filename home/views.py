@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
+from home.forms import SearchForm
 from home.models import Setting, ContactFormu, ContactFormMessage
 from news.models import News, Category, Images, Comments
 
@@ -70,9 +71,24 @@ def news_detail(request, id, slug):
     category = Category.objects.all()
     news = News.objects.get(pk=id)
     images = Images.objects.filter(news_id=id)
-    comments = Comments.objects.filter(news_id=id,status='True')
+    comments = Comments.objects.filter(news_id=id, status='True')
     context = {'news': news,
                'category': category,
                'images': images,
                'comments': comments}
     return render(request, 'news_detail.html', context)
+
+
+def news_search(request):
+    if request.method == 'POST':
+        form = SearchForm(request.POST)
+        if form.is_valid():
+            category = Category.objects.all()
+            query = form.cleaned_data['query']
+            news = News.objects.filter(title__icontains=query)
+
+            context = {'news': news,
+                       'category': category, }
+            return render(request, 'news_search.html', context)
+
+        return HttpResponseRedirect('/')
