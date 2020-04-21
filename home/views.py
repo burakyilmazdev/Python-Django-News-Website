@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.core.serializers import json
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
@@ -92,3 +93,19 @@ def news_search(request):
             return render(request, 'news_search.html', context)
 
         return HttpResponseRedirect('/')
+
+
+def news_search_auto(request):
+    if request.is_ajax():
+        q = request.GET.get('term', '')
+        news = News.objects.filter(title__icontains=q)
+        results = []
+        for rs in news:
+            news_json = {}
+            news_json = rs.title
+            results.append(news_json)
+        data = json.dumps(results)
+    else:
+        data = 'fail'
+    mimetype = 'application/json'
+    return HttpResponse(data, mimetype)

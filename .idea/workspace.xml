@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84445c65-fbbf-4fd9-95ae-e2663f318bc6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/news_search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -131,7 +134,11 @@
       <workItem from="1586960889492" duration="4408000" />
       <workItem from="1586990920236" duration="10697000" />
       <workItem from="1587055963357" duration="14801000" />
-      <workItem from="1587321988399" duration="3051000" />
+      <workItem from="1587321988399" duration="3730000" />
+      <workItem from="1587415844628" duration="6118000" />
+      <workItem from="1587438917527" duration="680000" />
+      <workItem from="1587478319081" duration="1011000" />
+      <workItem from="1587503963619" duration="1690000" />
     </task>
     <task id="LOCAL-00001" summary="Header değiştirildi.">
       <created>1585344145385</created>
@@ -210,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587089554941</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Arama çubuğu eklendi">
+      <created>1587325999110</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1587325999110</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,28 +241,29 @@
     <MESSAGE value="Haber detay sayfası oluşturuldu ve haberlere resim galerisi eklendi." />
     <MESSAGE value="Haberler sayfasındaki link sorunu çözüldü." />
     <MESSAGE value="Yorum yapma ve yorum listeleme yapıldı." />
-    <option name="LAST_COMMIT_MESSAGE" value="Yorum yapma ve yorum listeleme yapıldı." />
+    <MESSAGE value="Arama çubuğu eklendi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arama çubuğu eklendi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585343899639">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585343899639" />
-    <state x="673" y="14" key="CommitChangelistDialog2" timestamp="1587089554135">
+    <state x="673" y="14" key="CommitChangelistDialog2" timestamp="1587505679190">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="673" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587089554135" />
+    <state x="673" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587505679190" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1586969815200">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1586969815200" />
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1587089563787">
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1587326012279">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587089563787" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1587321988712">
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587326012279" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1587438918069">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1587321988712" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1587438918069" />
   </component>
 </project>
