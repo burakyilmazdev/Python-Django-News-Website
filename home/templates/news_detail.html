@@ -38,7 +38,7 @@
                         <b>Write a comment!</b>
                     </h4>
                     <div class="form">
-                        <form action="/news/addcomment/{{ news.id }}" role="form" class="contactForm">
+                        <form action="/news/addcomment/{{ news.id }}" role="form" class="contactForm" method="post">
                             {% csrf_token %}
                             <div class="form-group">
                                 <input type="text" class="form-control" name="subject" id="id_subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
@@ -49,7 +49,7 @@
 
                             </div>
                             {% if user.id is not None %}
-                                <div class="text-center"><button type="submit">Send Comment</button></div>
+                                <div class="text-center"><button type="submit" onclick="this.disabled=true;this.form.submit();">Send Comment</button></div>
                             {% else %}
                                 Yorum eklemek için Login olunuz!
                             {% endif %}
