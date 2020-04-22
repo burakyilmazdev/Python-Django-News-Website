@@ -10,23 +10,23 @@
                     <a class="navbar-brand" href="index.html" title="Home">
                         <h1 class="hidden">
                             <img src="{% static 'img/logo.png'%}" alt="Flexor Logo">
-                            Flexor
+                            News
                         </h1>
                     </a>
-                    <div class="navbar-slogan">
-                        Responsive HTML Theme
-                        <br> By BootstrapMade.com
-                    </div>
+
                 </div>
                 <!--header rightside-->
                 <div class="col-md-4">
                     <!--user menu-->
+
                     <ul class="list-inline user-menu pull-right">
-                        <li class="user-button"><a class="btn btn-primary btn-hh-trigger" role="button" data-toggle="collapse" data-target=".header-hidden">Open</a></li>
-                    </ul>
-                    <ul class="list-inline user-menu pull-right">
-                        <li class="user-register"><i class="fa fa-edit text-primary "></i> <a href="register.html" class="text-uppercase">Register</a></li>
-                        <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="login.html" class="text-uppercase">Login</a></li>
+                        <li class="user-register"><i class="fa fa-edit text-primary "></i> <a href="/join/" class="text-uppercase">Register</a></li>
+                        {% if user.id is not None %}
+                            <li class="user-login"></i>{{user.first_name}}</li>
+                            <li class="user-register"><i class="fa fa-edit text-primary "></i> <a href="/logout/" class="text-uppercase">Logout</a></li>
+
+                        {% else %}
+                        <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="/login/" class="text-uppercase">Login</a></li>{% endif %}
                     </ul>
                 </div>
             </div>
@@ -37,13 +37,7 @@
             <!--mobile collapse menu button-->
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
             <!--social media icons-->
-            <div class="navbar-text social-media social-media-inline pull-right">
-                <!--@todo: replace with company social media details-->
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-            </div>
+
             <!--everything within this div is collapsed on mobile-->
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" id="main-menu">

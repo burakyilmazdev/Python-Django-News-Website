@@ -32,6 +32,8 @@ urlpatterns = [
     path('news/<int:id>/<slug:slug>/', views.news_detail, name='news_detail'),
     path('search/', views.news_search, name='news_search'),
     path('search_auto', views.news_search_auto, name='news_search_auto'),
+    path('logout/', views.logout_view, name='logout_view'),
+    path('login/', views.login_view, name='login_view'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
