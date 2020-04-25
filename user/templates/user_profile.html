@@ -1,0 +1,64 @@
+{% extends "homebase.html" %}
+
+{%  block title %}{{ profile.user_name }}{% endblock %}
+{%  block keywords %}{{setting.keywords}}{% endblock %}
+{%  block description %}{{setting.description}}{% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" type='image/x-icon' href='{{ setting.icon.url }}'/>
+{% endblock %}
+
+{% block content %}
+
+    <div id="content">
+        <div class="container" id="about">
+            <div class="row">
+                <div class="col-md-3">
+
+                    {% include "user_panel.html" %}
+
+
+                </div>
+
+                <h3><b>User Informations</b> </h3>
+                <div class="col-md-9">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <td><img src="{{ profile.image.url }}" width="200" height="100" ></td>
+                        </tr>
+                        <tr>
+                            <th>Kullanıcı adı --> Name Surname</th>
+                            <td>{{ profile.user_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td>{{ profile.user.email }}</td>
+                        </tr>
+                        <tr>
+                            <th>Phone</th>
+                           <td>{{ profile.phone}}</td>
+                        </tr>
+                        <tr>
+                            <th>Adress</th>
+                           <td>{{ profile.address}}</td>
+                        </tr>
+                        <tr>
+                            <th>City</th>
+                            <td>{{ profile.city}}</td>
+                        </tr>
+                        <tr>
+                            <th>Country</th>
+                            <td>{{ profile.country}}</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
