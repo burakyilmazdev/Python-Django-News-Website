@@ -4,8 +4,8 @@
     <list default="true" id="84445c65-fbbf-4fd9-95ae-e2663f318bc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/news_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/news_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +134,8 @@
       <workItem from="1587438917527" duration="680000" />
       <workItem from="1587478319081" duration="1011000" />
       <workItem from="1587503963619" duration="16212000" />
-      <workItem from="1587583536267" duration="1429000" />
+      <workItem from="1587583536267" duration="1598000" />
+      <workItem from="1587783603644" duration="2215000" />
     </task>
     <task id="LOCAL-00001" summary="Header değiştirildi.">
       <created>1585344145385</created>
@@ -241,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587529129508</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Comment formunun iki kere submit edilmesi bugı düzeltildi.">
+      <created>1587585038882</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1587585038882</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,29 +270,30 @@
     <MESSAGE value="Otomatik slug üretme yapıldı" />
     <MESSAGE value="Anasayfada login işlemi yapıldı" />
     <MESSAGE value="Anasayfada sign up işlemleri yapıldı." />
-    <option name="LAST_COMMIT_MESSAGE" value="Anasayfada sign up işlemleri yapıldı." />
+    <MESSAGE value="Comment formunun iki kere submit edilmesi bugı düzeltildi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Comment formunun iki kere submit edilmesi bugı düzeltildi." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585343899639">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585343899639" />
-    <state x="673" y="14" key="CommitChangelistDialog2" timestamp="1587529128879">
+    <state x="673" y="14" key="CommitChangelistDialog2" timestamp="1587585038111">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="673" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587529128879" />
+    <state x="673" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587585038111" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1586969815200">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1586969815200" />
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1587529136574">
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1587585046488">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587529136574" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1587583536579">
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587585046488" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1587783603491">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1587583536579" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1587783603491" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587506675030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
