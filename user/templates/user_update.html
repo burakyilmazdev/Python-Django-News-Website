@@ -1,0 +1,40 @@
+{% extends "homebase.html" %}
+
+{%  block title %}{{ profile.user_name }}{% endblock %}
+{%  block keywords %}{{setting.keywords}}{% endblock %}
+{%  block description %}{{setting.description}}{% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" type='image/x-icon' href='{{ setting.icon.url }}'/>
+{% endblock %}
+
+{% block content %}
+
+    <div id="content">
+        <div class="container" id="about">
+            <div class="row">
+                <div class="col-md-3">
+
+                    {% include "user_panel.html" %}
+
+
+                </div>
+
+                <h3><b>User Informations</b> </h3>
+                <div class="col-md-9">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <table>
+                    {{ user_form.as_p }}
+                    {{ profile_form.as_p }}
+                    </table>
+                    <button type="submit" class="btn btn-inverse">Update</button>
+                    </form>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

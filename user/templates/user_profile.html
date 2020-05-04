@@ -25,7 +25,16 @@
                     <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <th></th>
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ message.tags }}" role="alert">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+
+                            {% endif %}
+                            <th><button type="button"  class="btn btn-lg btn-inverse"><a href="/user/password"> Change Password</a></button>
+                                <button type="button" class="btn btn-lg btn-inverse"><a href="/user/update">Update Profile</a></button></th>
                             <td><img src="{{ profile.image.url }}" width="200" height="100" ></td>
                         </tr>
                         <tr>
@@ -38,11 +47,11 @@
                         </tr>
                         <tr>
                             <th>Phone</th>
-                           <td>{{ profile.phone}}</td>
+                            <td>{{ profile.phone}}</td>
                         </tr>
                         <tr>
                             <th>Adress</th>
-                           <td>{{ profile.address}}</td>
+                            <td>{{ profile.address}}</td>
                         </tr>
                         <tr>
                             <th>City</th>
