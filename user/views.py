@@ -1,4 +1,5 @@
 from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
@@ -6,7 +7,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from home.models import UserProfile
-from news.models import Category
+from news.models import Category, News
 from user.forms import UserUpdateForm, ProfileUpdateForm
 
 
@@ -61,3 +62,16 @@ def change_password(request):
         return render(request, 'change_password.html', {
             'form': form, 'category': category
         })
+
+
+@login_required(login_url='/login')
+def mynews(request):
+    category = Category.objects.all()
+    current_user = request.user
+    news = News.objects.filter(user_id=current_user)
+    context = {
+        'category': category,
+        'news': news,
+    }
+
+    return render(request, 'user_news.html', context)

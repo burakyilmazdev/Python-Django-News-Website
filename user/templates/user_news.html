@@ -1,0 +1,62 @@
+{% extends "homebase.html" %}
+
+{%  block title %}{{ profile.user_name }}{% endblock %}
+{%  block keywords %}{{setting.keywords}}{% endblock %}
+{%  block description %}{{setting.description}}{% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" type='image/x-icon' href='{{ setting.icon.url }}'/>
+{% endblock %}
+
+{% block content %}
+
+    <div id="content">
+        <div class="container" id="about">
+            <div class="row">
+                <div class="col-md-3">
+
+                    {% include "user_panel.html" %}
+
+
+                </div>
+
+
+                <div class="col-md-9">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ message.tags }}" role="alert">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+
+                            {% endif %}
+
+                        </tr>
+                        <tr>
+
+                            <th>Title</th>
+                            <th>Created Date</th>
+                        </tr>
+                        {% for rs in news %}
+                            <tr>
+
+                                <td rowcol-md-="2"><a href="/news/{{ rs.id }}/{{ rs.slug }}"> {{ rs.title }}</a></td>
+                                <td>{{ rs.create_at }}</td>
+
+
+                            </tr>
+                        {% endfor %}
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

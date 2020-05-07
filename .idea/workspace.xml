@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84445c65-fbbf-4fd9-95ae-e2663f318bc6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_news.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
@@ -28,7 +28,12 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
@@ -146,7 +151,10 @@
       <workItem from="1587945878510" duration="313000" />
       <workItem from="1588196874024" duration="573000" />
       <workItem from="1588503496766" duration="243000" />
-      <workItem from="1588560225317" duration="11814000" />
+      <workItem from="1588560225317" duration="12175000" />
+      <workItem from="1588751952921" duration="1709000" />
+      <workItem from="1588777554612" duration="5153000" />
+      <workItem from="1588782932126" duration="5973000" />
     </task>
     <task id="LOCAL-00001" summary="Header değiştirildi.">
       <created>1585344145385</created>
@@ -274,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587795323760</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Kullanıcı profiline change password ve update profile kısımları eklendi">
+      <created>1588575026497</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1588575026497</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,61 +313,62 @@
     <MESSAGE value="Comment formunun iki kere submit edilmesi bugı düzeltildi." />
     <MESSAGE value="User profile yapıldı." />
     <MESSAGE value="Anasayfada üye paneli ve bilgileri sayfası yapıldı." />
-    <option name="LAST_COMMIT_MESSAGE" value="Anasayfada üye paneli ve bilgileri sayfası yapıldı." />
+    <MESSAGE value="Kullanıcı profiline change password ve update profile kısımları eklendi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kullanıcı profiline change password ve update profile kısımları eklendi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585343899639">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585343899639" />
-    <state x="673" y="14" key="CommitChangelistDialog2" timestamp="1587795323061">
+    <state x="673" y="14" key="CommitChangelistDialog2" timestamp="1588575025632">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="673" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587795323061" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1588571205169">
+    <state x="673" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588575025632" />
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1588575119053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588571205169" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1588571205169">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588575119053" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1588575119053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588571205169" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1588571205169">
+    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588575119053" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1588575119053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588571205169" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1588571205169">
+    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588575119053" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1588575119053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588571205169" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1588571205169">
+    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588575119053" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1588575119053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588571205169" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1588571205169">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588575119053" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1588575119053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588571205169" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1588571205169">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588575119053" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1588575119053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588571205169" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1588571205169">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588575119053" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1588575119053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588571205169" />
-    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1586969815200">
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588575119053" />
+    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1588841030673">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1586969815200" />
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1587795333336">
+    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1588841030673" />
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1588575033295">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587795333336" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588503725574">
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588575033295" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588782933615">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588503725574" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588782933615" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587506675030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
