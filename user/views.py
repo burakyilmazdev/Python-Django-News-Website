@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from home.models import UserProfile
-from news.models import Category, News
+from news.models import Category, News, Comments
 from user.forms import UserUpdateForm, ProfileUpdateForm
 
 
@@ -75,3 +75,23 @@ def mynews(request):
     }
 
     return render(request, 'user_news.html', context)
+
+
+@login_required(login_url='/login')
+def comments(request):
+    category = Category.objects.all()
+    current_user = request.user
+    comments = Comments.objects.filter(user_id=current_user)
+    context = {
+        'category': category,
+        'comments': comments,
+    }
+    return render(request, 'user_comments.html', context)
+
+
+@login_required(login_url='/login')
+def deletecomment(request, id):
+    current_user = request.user
+    Comments.objects.filter(id=id, user_id=current_user.id).delete()
+    messages.success(request, 'Comment has been deleted')
+    return HttpResponseRedirect('/user/comments')

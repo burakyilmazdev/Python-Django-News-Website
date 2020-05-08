@@ -1,6 +1,6 @@
 {% extends "homebase.html" %}
 
-{%  block title %}{{ profile.user_name }}{% endblock %}
+{%  block title %}My Comments{% endblock %}
 {%  block keywords %}{{setting.keywords}}{% endblock %}
 {%  block description %}{{setting.description}}{% endblock %}
 
@@ -37,15 +37,25 @@
                         </tr>
                         <tr>
 
-                            <th>Title</th>
-                            <th>Created Date</th>
-                        </tr>
-                        {% for rs in news %}
-                            <tr>
+                            <th>News</th>
+                            <th>Subject</th>
+                            <th>Comment</th>
+                            <th>Date</th>
 
-                                <td rowcol-md-="2"><a href="/news/{{ rs.id }}/{{ rs.slug }}"> {{ rs.title }}</a></td>
+                        </tr>
+                        {% for rs in comments %}
+                            <tr>
+                            <td><a href="/news/{{ rs.news.id }}/{{ rs.news.slug }}">{{ rs.news.title }}</a></td>
+
+
+                                <td>{{ rs.subject }}</td>
+
+
+                                <td>{{ rs.comment }}</td>
+
                                 <td>{{ rs.create_at }}</td>
 
+                                <td><button type="button" class="btn btn-inverse"><a href="/user/deletecomment/{{ rs.id }}" onclick="return confirm('Are you sure?')">Sil</a> </button></td>
                             </tr>
                         {% endfor %}
 
