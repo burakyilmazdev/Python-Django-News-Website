@@ -21,12 +21,15 @@ from django.urls import path, include
 from home import views
 
 urlpatterns = [
+    path('content/<int:id>/<slug:slug>/', views.contentdetail, name='contentdetail'),
+    path('error/',views.error,name='error'),
+    path('content/', include('content.urls')),
     path('', include('home.urls')),
     path('home/', include('home.urls')),
     path('news/', include('news.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
-    path('user/',include('user.urls')),
-
+    path('user/', include('user.urls')),
+    path('menu/<int:id>/', views.menu, name='menu'),
     path('admin/', admin.site.urls),
     path('aboutus/', views.aboutus, name='aboutus'),
     path('contact/', views.contact, name='contact'),

@@ -26,7 +26,7 @@
                             <li class="user-register"><i class="fa fa-edit text-primary "></i> <a href="/logout/" class="text-uppercase">Logout</a></li>
 
                         {% else %}
-                        <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="/login/" class="text-uppercase">Login</a></li>{% endif %}
+                            <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="/login/" class="text-uppercase">Login</a></li>{% endif %}
                     </ul>
                 </div>
             </div>
@@ -67,33 +67,26 @@
                     </li>
                     <li><a href="/aboutus/">About Us</a></li>
                     <li><a href="/contact/">Contact</a></li>
-                    <li class="dropdown dropdown-mm">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mega Menu<b class="caret"></b></a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<b class="caret"></b></a>
                         <!-- Dropdown Menu -->
-                        <ul class="dropdown-menu dropdown-menu-mm dropdown-menu-persist">
-                            <li class="row">
-                                <ul class="col-md-6">
-                                    <li class="dropdown-header">Websites and Apps</li>
-                                    <li><a href="#">Analysis and Planning</a></li>
-                                    <li><a href="#">User Experience / Information Architecture</a></li>
-                                    <li><a href="#">User Interface Design / UI Design</a></li>
-                                    <li><a href="#">Code &amp; Development / Implementation &amp; Support</a></li>
-                                </ul>
-                                <ul class="col-md-6">
-                                    <li class="dropdown-header">Enterprise solutions</li>
-                                    <li><a href="#">Business Analysis</a></li>
-                                    <li><a href="#">Custom UX Consulting</a></li>
-                                    <li><a href="#">Quality Assurance</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-footer">
-                                <div class="row">
-                                    <div class="col-md-7">Like the lite version? <strong>Get the extended version of Flexor.</strong></div>
-                                    <div class="col-md-5">
-                                        <a href="https://bootstrapmade.com" class="btn btn-more btn-lg pull-right"><i class="fa fa-cloud-download"></i> Get It Now</a>
-                                    </div>
-                                </div>
-                            </li>
+                        <ul class="dropdown-menu">
+                            {% load mptt_tags %}
+                        {% if menu %}
+                            {% recursetree menu %}
+
+                                <li><a href="/menu/{{ node.id }}" tabindex="-1" class="menu-item">{{ node.title }}</a></li>
+
+                                {% if not node.is_leaf_node %}
+                                    <ul class="children">
+                                        {{ children }}
+
+                                    </ul>
+                                {% endif %}
+
+                            {% endrecursetree %}
+                        {% endif %}
+                            <!-- ÖRNEK <li><a href="elements.html" tabindex="-1" class="menu-item">Elements</a></li> -->
                         </ul>
                     </li>
                     <li>

@@ -2,13 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84445c65-fbbf-4fd9-95ae-e2663f318bc6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/content_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/5054e3e5-8edd-403a-aff8-85c50113eded.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/728xauto_7_12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Mark_Zuckerberg_em_setembro_de_2014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Sandberg-4_2236140b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/ce837c8a-3843-4873-b0ae-c9c806ef9baa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_HyOT3Aa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_OitcVry.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir_z0j2fHB.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,24 +76,27 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YeXno3iCs3bNj79nzlTMc1Heyr" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/user/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Django\project2\user\templates" />
       <recent name="C:\Django\project2\home\templates" />
+      <recent name="C:\Django\project2\user\templates" />
       <recent name="C:\Django\project2\news" />
     </key>
   </component>
@@ -153,7 +176,8 @@
       <workItem from="1588751952921" duration="1709000" />
       <workItem from="1588777554612" duration="5153000" />
       <workItem from="1588782932126" duration="6662000" />
-      <workItem from="1588977182948" duration="2317000" />
+      <workItem from="1588977182948" duration="4454000" />
+      <workItem from="1589189364659" duration="22552000" />
     </task>
     <task id="LOCAL-00001" summary="Header değiştirildi.">
       <created>1585344145385</created>
@@ -295,13 +319,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588844363235</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Kullanıcı sayfasında my comments sayfası getirildi.">
+      <created>1588979761207</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1588979761207</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Header değiştirildi." />
     <MESSAGE value="Ckeditor eklendi." />
     <MESSAGE value="About us ve contact sayfaları oluşturuldu." />
@@ -321,17 +353,18 @@
     <MESSAGE value="Anasayfada üye paneli ve bilgileri sayfası yapıldı." />
     <MESSAGE value="Kullanıcı profiline change password ve update profile kısımları eklendi" />
     <MESSAGE value="Kullanıcıya my news sayfası eklendi." />
-    <option name="LAST_COMMIT_MESSAGE" value="Kullanıcıya my news sayfası eklendi." />
+    <MESSAGE value="Kullanıcı sayfasında my comments sayfası getirildi." />
+    <option name="LAST_COMMIT_MESSAGE" value="Kullanıcı sayfasında my comments sayfası getirildi." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585343899639">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585343899639" />
-    <state x="651" y="14" key="CommitChangelistDialog2" timestamp="1588844362508">
+    <state x="651" y="14" key="CommitChangelistDialog2" timestamp="1588979760446">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="651" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588844362508" />
+    <state x="651" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588979760446" />
     <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1588575119053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -368,17 +401,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1588841030673" />
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1588844417251">
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1588979769729">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588844417251" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588977188209">
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588979769729" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589189364636">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588977188209" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587506675030">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589189364636" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589190816370">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587506675030" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589190816370" />
   </component>
 </project>

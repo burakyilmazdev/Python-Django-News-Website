@@ -5,6 +5,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
+from content.models import Menu, Content, CImages
 from home.forms import SearchForm, RegisterForm
 from home.models import Setting, ContactFormu, ContactFormMessage
 from news.models import News, Category, Images, Comments
@@ -14,15 +15,21 @@ def index(request):
     setting = Setting.objects.get(pk=1)
     sliderdata = News.objects.all()[:6]
     category = Category.objects.all()
+    menu = Menu.objects.all()
     lastnews = News.objects.all().order_by('-id')[:4]
     randomnews = News.objects.all().order_by('?')[:4]
+    events = Content.objects.filter(type='etkinlik').order_by('-id')[:3]
+    announcements = Content.objects.filter(type='duyuru').order_by('-id')[:3]
 
     context = {'setting': setting,
                'category': category,
                'page': 'home',
+               'menu':menu,
                'sliderdata': sliderdata,
                'lastnews': lastnews,
-               'randomnews': randomnews}
+               'randomnews': randomnews,
+               'events': events,
+               'announcements': announcements}
     return render(request, 'index.html', context)
 
 
@@ -155,3 +162,37 @@ def signup_view(request):
                'form': form,
                }
     return render(request, 'signup.html', context)
+
+
+def menu(request, id):
+    try:
+        content = Content.objects.get(menu_id=id)
+        link = '/content/' + str(content.id) + '/menu'
+        return HttpResponseRedirect(link)
+    except:
+        messages.warning(request, "İçerik bulunamadı!")
+        link = '/error'
+        return HttpResponseRedirect(link)
+
+
+def contentdetail(request, id, slug):
+    category = Category.objects.all()
+    menu = Menu.objects.all()
+    content = Content.objects.get(pk=id)
+    images = CImages.objects.filter(content_id=id)
+
+    context = {'content': content,
+               'category': category,
+               'menu': menu,
+               'images': images, }
+    return render(request, 'content_detail.html', context)
+
+
+def error(request):
+    category = Category.objects.all()
+    menu = Menu.objects.all()
+
+    context = {'category': category,
+               'menu': menu,
+               }
+    return render(request, 'error.html', context)

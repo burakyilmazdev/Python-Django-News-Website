@@ -5,26 +5,45 @@
     <!--Showcase-->
     <div class="mission text-center block block-pd-sm block-bg-noise">
         <div class="container">
+            <div class="item-carousel" data-toggle="owlcarousel" data-owlcarousel-settings='{"items":4, "pagination":false, "navigation":true, "itemsScaleUp":true}'>
+                <div class="col-md-10">
+              <h3><b>Duyurular</b></h3>
+                    {% for rs in announcements %}
+                       <li><a href="/content/{{ rs.id }}/{{ rs.slug }}"> <h5>{{ rs.title }}</h5></a></li>
+                    {% endfor %}
+                </div>
+                <div class="col-md-15">
+                <h3><b>Etkinlikler</b></h3>
+                    {% for rs in events %}
+                       <li><a href="/content/{{ rs.id }}/{{ rs.slug }}"> <h5>{{ rs.title }}</h5></a></li>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="mission text-center block block-pd-sm block-bg-noise">
+        <div class="container">
             <h2 class="block-title">
-               <b>Son Dakika Haberleri</b>
+                <b>Son Dakika Haberleri</b>
             </h2>
 
             <div class="item-carousel" data-toggle="owlcarousel" data-owlcarousel-settings='{"items":4, "pagination":false, "navigation":true, "itemsScaleUp":true}'>
                 {% for rs in lastnews %}
-                <div class="item">
-                    <a href="/news/{{ rs.id }}/{{ rs.slug }}" class="overlay-wrapper">
-                        <img src="{{rs.image.url}}" alt="Project 1 image" class="img-responsive underlay">
-                        <span class="overlay">
+                    <div class="item">
+                        <a href="/news/{{ rs.id }}/{{ rs.slug }}" class="overlay-wrapper">
+                            <img src="{{rs.image.url}}" alt="Project 1 image" class="img-responsive underlay">
+                            <span class="overlay">
                   <span class="overlay-content"> <span class="h4">{{rs.title}}</span> </span>
                 </span>
-                    </a>
-                    <div class="item-details bg-noise">
-                        <h4 class="item-title">
-                            <a href="/news/{{ rs.id }}/{{ rs.slug }}">{{rs.title}}</a>
-                        </h4>
-                        <a href="/news/{{ rs.id }}/{{ rs.slug }}" class="btn btn-more"><i class="fa fa-plus"></i>Haberi Oku</a>
+                        </a>
+                        <div class="item-details bg-noise">
+                            <h4 class="item-title">
+                                <a href="/news/{{ rs.id }}/{{ rs.slug }}">{{rs.title}}</a>
+                            </h4>
+                            <a href="/news/{{ rs.id }}/{{ rs.slug }}" class="btn btn-more"><i class="fa fa-plus"></i>Haberi Oku</a>
+                        </div>
                     </div>
-                </div>
                 {% endfor %}
 
 
@@ -35,27 +54,27 @@
     <div class="mission text-center block block-pd-sm block-bg-noise">
         <div class="container">
             <h2 class="block-title">
-               <b> Haberler</b>
+                <b> Haberler</b>
             </h2>
 
 
             <div class="item-carousel" data-toggle="owlcarousel" data-owlcarousel-settings='{"items":4, "pagination":false, "navigation":true, "itemsScaleUp":true}'>
                 {% for rs in randomnews %}
 
-                <div class="item">
-                    <a href="/news/{{ rs.id }}/{{ rs.slug }}" class="overlay-wrapper">
-                        <img src="{{rs.image.url}}" alt="Project 1 image" class="img-responsive underlay">
-                        <span class="overlay">
+                    <div class="item">
+                        <a href="/news/{{ rs.id }}/{{ rs.slug }}" class="overlay-wrapper">
+                            <img src="{{rs.image.url}}" alt="Project 1 image" class="img-responsive underlay">
+                            <span class="overlay">
                   <span class="overlay-content"> <span class="h4">{{rs.title}}</span> </span>
                 </span>
-                    </a>
-                    <div class="item-details bg-noise">
-                        <h4 class="item-title">
-                            <a href="/news/{{ rs.id }}/{{ rs.slug }}">{{rs.title}}</a>
-                        </h4>
-                        <a href="/news/{{ rs.id }}/{{ rs.slug }}" class="btn btn-more"><i class="fa fa-plus"></i>Haberi Oku</a>
+                        </a>
+                        <div class="item-details bg-noise">
+                            <h4 class="item-title">
+                                <a href="/news/{{ rs.id }}/{{ rs.slug }}">{{rs.title}}</a>
+                            </h4>
+                            <a href="/news/{{ rs.id }}/{{ rs.slug }}" class="btn btn-more"><i class="fa fa-plus"></i>Haberi Oku</a>
+                        </div>
                     </div>
-                </div>
                 {% endfor %}
 
             </div>
