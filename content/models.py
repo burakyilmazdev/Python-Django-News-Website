@@ -2,6 +2,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 
 # Create your models here.
+from django.forms import ModelForm, TextInput, Select
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 from mptt.fields import TreeForeignKey
@@ -33,13 +34,15 @@ class Menu(MPTTModel):
         return ' --> '.join(full_path[::-1])
 
 
+TYPE = (
+    ('menu', 'menu'),
+    ('haber', 'haber'),
+    ('duyuru', 'duyuru'),
+    ('etkinlik', 'etkinlik'),
+)
+
+
 class Content(models.Model):
-    TYPE = (
-        ('menu', 'menu'),
-        ('haber', 'haber'),
-        ('duyuru', 'duyuru'),
-        ('etkinlik', 'etkinlik'),
-    )
     STATUS = (
         ('True', 'Evet'),
         ('True', 'Evet'),
@@ -81,4 +84,5 @@ class CImages(models.Model):
         return mark_safe('<img src="{}" height="50" />'.format(self.image.url))
 
     image_tag.short_description = 'Image'
+
 

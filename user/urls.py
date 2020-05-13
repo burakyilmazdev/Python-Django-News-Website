@@ -10,6 +10,9 @@ urlpatterns = [
     path('mynews/', views.mynews, name='mynews'),
     path('comments/', views.comments, name='comments'),
     path('deletecomment/<int:id>', views.deletecomment, name='deletecomment'),
+    path('newsedit/<int:id>', views.newsedit, name='newsedit'),
+    path('newsdelete/<int:id>', views.newsdelete, name='newsdelete'),
+    path('addnews/', views.addnews, name='addnews'),
     # ex: /polls/5/
     # path('<int:question_id>/', views.detail, name='detail'),
 

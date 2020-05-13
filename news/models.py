@@ -1,8 +1,11 @@
+from unicodedata import category
+
+from ckeditor.widgets import CKEditorWidget
 from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
-from django.forms import ModelForm, TextInput, Textarea
+from django.forms import ModelForm, TextInput, Textarea, Select, FileInput, DateField, ModelChoiceField
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 from ckeditor_uploader.fields import RichTextUploadingField
@@ -115,3 +118,20 @@ class CommentFormu(ModelForm):
     class Meta:
         model = Comments
         fields = ['subject', 'comment']
+
+
+class NewsForm(ModelForm):
+    class Meta:
+        model = News
+        queryset = Category.objects.all()
+        fields = ['category', 'title', 'keywords', 'description', 'image', 'slug', 'detail']
+        widgets = {
+            'category': Select(attrs={'class': 'input', 'placeholder': 'category'}, choices=queryset),
+            'title': TextInput(attrs={'class': 'input', 'placeholder': 'title'}),
+            'keywords': TextInput(attrs={'class': 'input', 'placeholder': 'keywords'}),
+            'description': TextInput(attrs={'class': 'input', 'placeholder': 'description'}),
+            'image': FileInput(attrs={'class': 'input', 'placeholder': 'image'}),
+            'slug': TextInput(attrs={'class': 'input', 'placeholder': 'slug'}),
+            'detail': CKEditorWidget(),
+
+        }

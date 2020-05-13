@@ -22,6 +22,7 @@
 
 
                 <div class="col-md-9">
+                <button type="button" class="btn btn-lg btn-inverse"><a href="/user/addnews/"> Add News</a></button><br><br>
                     <table class="table table-bordered">
                         <thead>
                         <tr>
@@ -45,6 +46,9 @@
 
                                 <td rowcol-md-="2"><a href="/news/{{ rs.id }}/{{ rs.slug }}"> {{ rs.title }}</a></td>
                                 <td>{{ rs.create_at }}</td>
+                                <td><button type="button" class="btn btn-inverse"><a onclick="return confirm('Are you sure?')" href="/user/newsdelete/{{ rs.id }}">Delete</a></button></td>
+                                <td><button type="button" class="btn btn-inverse"><a href="/user/newsedit/{{ rs.id }}">Edit</a></button></td>
+
 
                             </tr>
                         {% endfor %}
