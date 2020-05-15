@@ -7,7 +7,7 @@ from django.shortcuts import render
 # Create your views here.
 from content.models import Menu, Content, CImages
 from home.forms import SearchForm, RegisterForm
-from home.models import Setting, ContactFormu, ContactFormMessage, FAQ
+from home.models import Setting, ContactFormu, ContactFormMessage, FAQ, UserProfile
 from news.models import News, Category, Images, Comments
 
 
@@ -24,7 +24,7 @@ def index(request):
     context = {'setting': setting,
                'category': category,
                'page': 'home',
-               'menu':menu,
+               'menu': menu,
                'sliderdata': sliderdata,
                'lastnews': lastnews,
                'randomnews': randomnews,
@@ -152,7 +152,14 @@ def signup_view(request):
             password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=password)
             login(request, user)
-            return HttpResponseRedirect('/')
+
+            current_user = request.user
+            data = UserProfile()
+            data.user_id = current_user.id
+            data.image = "images/users/user.png"
+            data.save()
+            messages.success(request, "Üye olundu,Hoşgeldiniz!")
+            return HttpResponseRedirect('/user')
         else:
             messages.warning(request, "Bu kullanıcı adı veya email kullanılıyor!")
 
@@ -201,11 +208,10 @@ def error(request):
 def faq(request):
     category = Category.objects.all()
     menu = Menu.objects.all()
-    faq=FAQ.objects.all().order_by('number')
+    faq = FAQ.objects.all().order_by('number')
 
     context = {'category': category,
                'menu': menu,
-               'faq':faq,
+               'faq': faq,
                }
     return render(request, 'faq.html', context)
-

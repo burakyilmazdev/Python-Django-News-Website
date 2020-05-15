@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84445c65-fbbf-4fd9-95ae-e2663f318bc6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/content/migrations/0002_auto_20200514_0304.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/migrations/0007_faq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/migrations/0008_auto_20200515_2350.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/migrations/0009_faq_number.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/faq.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/users/tracy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/users/user.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/content/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project2/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +157,7 @@
       <workItem from="1588977182948" duration="4454000" />
       <workItem from="1589189364659" duration="22637000" />
       <workItem from="1589385326443" duration="12785000" />
-      <workItem from="1589575089093" duration="3687000" />
+      <workItem from="1589575089093" duration="5591000" />
     </task>
     <task id="LOCAL-00001" summary="Header değiştirildi.">
       <created>1585344145385</created>
@@ -328,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589414344883</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Sıkça sorulan sorular kısmı yapıldı.">
+      <created>1589578913553</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1589578913553</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,17 +357,18 @@
     <MESSAGE value="Kullanıcı sayfasında my comments sayfası getirildi." />
     <MESSAGE value="Content Management System yapıldı" />
     <MESSAGE value="Kullanıcı menüsünden haber ekleme,silme,düzenleme işlemleri yapıldı." />
-    <option name="LAST_COMMIT_MESSAGE" value="Kullanıcı menüsünden haber ekleme,silme,düzenleme işlemleri yapıldı." />
+    <MESSAGE value="Sıkça sorulan sorular kısmı yapıldı." />
+    <option name="LAST_COMMIT_MESSAGE" value="Sıkça sorulan sorular kısmı yapıldı." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585343899639">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585343899639" />
-    <state x="651" y="14" key="CommitChangelistDialog2" timestamp="1589414343940">
+    <state x="651" y="14" key="CommitChangelistDialog2" timestamp="1589578912601">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="651" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589414343940" />
+    <state x="651" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589578912601" />
     <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1588575119053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -405,10 +405,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1588841030673" />
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1589414354713">
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1589578924985">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589414354713" />
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589578924985" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589575094386">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
