@@ -22,7 +22,7 @@ from home import views
 
 urlpatterns = [
     path('content/<int:id>/<slug:slug>/', views.contentdetail, name='contentdetail'),
-    path('error/',views.error,name='error'),
+    path('error/', views.error, name='error'),
     path('content/', include('content.urls')),
     path('', include('home.urls')),
     path('home/', include('home.urls')),
@@ -40,6 +40,7 @@ urlpatterns = [
     path('logout/', views.logout_view, name='logout_view'),
     path('login/', views.login_view, name='login_view'),
     path('signup/', views.signup_view, name='signup_view'),
+    path('sss/', views.faq, name='faq')
 
 ]
 if settings.DEBUG:

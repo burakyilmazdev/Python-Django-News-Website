@@ -36,7 +36,6 @@ class Menu(MPTTModel):
 
 TYPE = (
     ('menu', 'menu'),
-    ('haber', 'haber'),
     ('duyuru', 'duyuru'),
     ('etkinlik', 'etkinlik'),
 )
