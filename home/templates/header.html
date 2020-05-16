@@ -1,4 +1,9 @@
 {% load static %}
+<!-- jQuery !-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
+<!-- jQuery UI !-->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
 <div id="background-wrapper" class="buildings" data-stellar-background-ratio="0.1">
     <!--Header & navbar-branding region-->
@@ -7,12 +12,6 @@
             <div class="row">
                 <div class="col-md-8">
                     <!--navbar-branding/logo - hidden image tag & site name so things like Facebook to pick up, actual logo set via CSS for flexibility -->
-                    <a class="navbar-brand" href="index.html" title="Home">
-                        <h1 class="hidden">
-                            <img src="{% static 'img/logo.png'%}" alt="Flexor Logo">
-                            News
-                        </h1>
-                    </a>
 
                 </div>
                 <!--header rightside-->
@@ -90,16 +89,16 @@
                             <!-- ÖRNEK <li><a href="elements.html" tabindex="-1" class="menu-item">Elements</a></li> -->
                         </ul>
                     </li>
+
                     <li>
+                        <div class="search-bar mt-sm-2 mr-2">
                         <form action="/search/" method="post">
                             {% csrf_token %}
                             <input  id="query" name="query" class="input search-input" type="text" placeholder="arama yap">
-                            <button class="search-btn"><i class="fa fa-search"></i> </button>
+                            <button class="search-btn btn-xs btn-inverse"><i class="fa fa-search"></i> </button>
                             {% load mptt_tags %}
-
-
                         </form>
-
+                        </div>
 
 
                         <script>

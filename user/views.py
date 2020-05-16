@@ -6,6 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 
 # Create your views here.
+from content.models import Menu
 from home.models import UserProfile
 from news.models import Category, News, Comments, NewsForm
 from user.forms import UserUpdateForm, ProfileUpdateForm
@@ -13,14 +14,17 @@ from user.forms import UserUpdateForm, ProfileUpdateForm
 
 def index(request):
     category = Category.objects.all()
+    menu = Menu.objects.all()
     current_user = request.user
     profile = UserProfile.objects.get(user_id=current_user.id)
     context = {'category': category,
-               'profile': profile}
+               'profile': profile,
+               'menu': menu}
     return render(request, 'user_profile.html', context)
 
 
 def user_update(request):
+    menu = Menu.objects.all()
     if request.method == "POST":
         user_form = UserUpdateForm(request.POST, instance=request.user)
 
@@ -39,12 +43,14 @@ def user_update(request):
             'category': category,
             'user_form': user_form,
             'profile_form': profile_form,
+            'menu': menu
         }
 
         return render(request, 'user_update.html', context)
 
 
 def change_password(request):
+    menu = Menu.objects.all()
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
@@ -60,18 +66,20 @@ def change_password(request):
         category = Category.objects.all()
         form = PasswordChangeForm(request.user)
         return render(request, 'change_password.html', {
-            'form': form, 'category': category
+            'form': form, 'category': category, 'menu': menu,
         })
 
 
 @login_required(login_url='/login')
 def mynews(request):
+    menu = Menu.objects.all()
     category = Category.objects.all()
     current_user = request.user
     news = News.objects.filter(user_id=current_user)
     context = {
         'category': category,
         'news': news,
+        'menu':menu
     }
 
     return render(request, 'user_news.html', context)
@@ -79,12 +87,14 @@ def mynews(request):
 
 @login_required(login_url='/login')
 def comments(request):
+    menu = Menu.objects.all()
     category = Category.objects.all()
     current_user = request.user
     comments = Comments.objects.filter(user_id=current_user)
     context = {
         'category': category,
         'comments': comments,
+        'menu':menu
     }
     return render(request, 'user_comments.html', context)
 
@@ -95,6 +105,7 @@ def deletecomment(request, id):
     Comments.objects.filter(id=id, user_id=current_user.id).delete()
     messages.success(request, 'Comment has been deleted')
     return HttpResponseRedirect('/user/comments')
+
 
 @login_required(login_url='/login')
 def addnews(request):
@@ -121,34 +132,40 @@ def addnews(request):
 
     else:
         category = Category.objects.all()
+        menu = Menu.objects.all()
         form = NewsForm()
         context = {
             'category': category,
             'form': form,
+            'menu':menu
         }
         return render(request, 'user_addnews.html', context)
 
+
 @login_required(login_url='/login')
-def newsedit(request,id):
+def newsedit(request, id):
     news = News.objects.get(id=id)
     if request.method == 'POST':
-        form = NewsForm(request.POST, request.FILES,instance=news)
+        form = NewsForm(request.POST, request.FILES, instance=news)
         if form.is_valid():
             form.save()
             messages.success(request, 'Your news has been updated!')
             return HttpResponseRedirect('/user/mynews')
         else:
             messages.warning(request, "Error")
-            return HttpResponseRedirect('/user/newsedit'+str(id))
+            return HttpResponseRedirect('/user/newsedit' + str(id))
 
     else:
         category = Category.objects.all()
+        menu = Menu.objects.all()
         form = NewsForm(instance=news)
         context = {
             'category': category,
             'form': form,
+            'menu':menu,
         }
         return render(request, 'user_addnews.html', context)
+
 
 @login_required(login_url='/login')
 def newsdelete(request, id):
@@ -156,4 +173,3 @@ def newsdelete(request, id):
     News.objects.filter(id=id, user_id=current_user.id).delete()
     messages.success(request, 'News has been deleted')
     return HttpResponseRedirect('/user/mynews')
-

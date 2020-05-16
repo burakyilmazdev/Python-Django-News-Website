@@ -9,6 +9,7 @@ from content.models import Menu, Content, CImages
 from home.forms import SearchForm, RegisterForm
 from home.models import Setting, ContactFormu, ContactFormMessage, FAQ, UserProfile
 from news.models import News, Category, Images, Comments
+import json
 
 
 def index(request):
@@ -35,15 +36,18 @@ def index(request):
 
 def aboutus(request):
     setting = Setting.objects.get(pk=1)
+    menu = Menu.objects.all()
     category = Category.objects.all()
     context = {'setting': setting,
                'page': 'aboutus',
-               'category': category}
+               'category': category,
+               'menu': menu}
     return render(request, 'aboutus.html', context)
 
 
 def contact(request):
     category = Category.objects.all()
+    menu = Menu.objects.all()
     if request.method == 'POST':
         form = ContactFormu(request.POST)
         if form.is_valid():
@@ -61,7 +65,8 @@ def contact(request):
     form = ContactFormu()
     context = {'setting': setting,
                'form': form,
-               'category': category}
+               'category': category,
+               'menu': menu}
     return render(request, 'contact.html', context)
 
 
@@ -69,9 +74,11 @@ def category_news(request, id, slug):
     category = Category.objects.all()
     categorydata = Category.objects.get(pk=id)
     news = News.objects.filter(category_id=id)
+    menu = Menu.objects.all()
     context = {'news': news,
                'category': category,
-               'categorydata': categorydata
+               'categorydata': categorydata,
+               'menu': menu,
                }
     return render(request, 'news.html', context)
 
@@ -80,15 +87,18 @@ def news_detail(request, id, slug):
     category = Category.objects.all()
     news = News.objects.get(pk=id)
     images = Images.objects.filter(news_id=id)
+    menu = Menu.objects.all()
     comments = Comments.objects.filter(news_id=id, status='True')
     context = {'news': news,
                'category': category,
                'images': images,
-               'comments': comments}
+               'comments': comments,
+               'menu': menu}
     return render(request, 'news_detail.html', context)
 
 
 def news_search(request):
+    menu = Menu.objects.all()
     if request.method == 'POST':
         form = SearchForm(request.POST)
         if form.is_valid():
@@ -97,7 +107,8 @@ def news_search(request):
             news = News.objects.filter(title__icontains=query)
 
             context = {'news': news,
-                       'category': category, }
+                       'category': category,
+                       'menu': menu, }
             return render(request, 'news_search.html', context)
 
         return HttpResponseRedirect('/')
@@ -139,7 +150,9 @@ def login_view(request):
             return HttpResponseRedirect('/login')
 
     category = Category.objects.all()
-    context = {'category': category, }
+    menu = Menu.objects.all()
+    context = {'category': category,
+               'menu': menu}
     return render(request, 'login.html', context)
 
 
@@ -165,8 +178,10 @@ def signup_view(request):
 
     form = RegisterForm()
     category = Category.objects.all()
+    menu = Menu.objects.all()
     context = {'category': category,
                'form': form,
+               'menu': menu
                }
     return render(request, 'signup.html', context)
 
