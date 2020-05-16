@@ -16,14 +16,24 @@
             <div class="row">
 
                 <h2><b>{{ news.title }}</b></h2><br><br>
-                {{ news.detail | safe}}<br><br>
+                {{ news.detail | safe}}<br><br><br><br><br>
 
-
+                <div class="item-carousel" data-toggle="owlcarousel" data-owlcarousel-settings='{"items":4, "pagination":false, "navigation":true, "itemsScaleUp":true}'>
                 {% for rs in images %}
-                    <img src="{{ rs.image.url }}"><br>
+                    <div class="item">
+                        <a class="overlay-wrapper">
+                            <img src="{{rs.image.url}}" height="500" width="500" alt="Project 1 image" class="img-responsive underlay">
+
+                        </a>
+
+                    </div>
                 {% endfor %}
 
 
+            </div>
+
+
+        <br><br>
                 <div class="col-md-6">
 
                     {% if messages %}
