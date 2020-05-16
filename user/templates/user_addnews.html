@@ -1,6 +1,11 @@
 {% extends "homebase.html" %}
 
-{%  block title %}{{ profile.user_name }}{% endblock %}
+{%  block title %}{% if news.title %}
+    {{ news.title }}
+    {% else %}
+    Add News
+    {% endif %}
+{% endblock %}
 {%  block keywords %}{{setting.keywords}}{% endblock %}
 {%  block description %}{{setting.description}}{% endblock %}
 

@@ -79,7 +79,7 @@ def mynews(request):
     context = {
         'category': category,
         'news': news,
-        'menu':menu
+        'menu': menu
     }
 
     return render(request, 'user_news.html', context)
@@ -94,7 +94,7 @@ def comments(request):
     context = {
         'category': category,
         'comments': comments,
-        'menu':menu
+        'menu': menu
     }
     return render(request, 'user_comments.html', context)
 
@@ -131,13 +131,15 @@ def addnews(request):
             return HttpResponseRedirect('/user/addnews')
 
     else:
+        news = News.objects.all()
         category = Category.objects.all()
         menu = Menu.objects.all()
         form = NewsForm()
         context = {
             'category': category,
             'form': form,
-            'menu':menu
+            'menu': menu,
+            'news': news,
         }
         return render(request, 'user_addnews.html', context)
 
@@ -162,7 +164,8 @@ def newsedit(request, id):
         context = {
             'category': category,
             'form': form,
-            'menu':menu,
+            'menu': menu,
+            'news': news,
         }
         return render(request, 'user_addnews.html', context)
 

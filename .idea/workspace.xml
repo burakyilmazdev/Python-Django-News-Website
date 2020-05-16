@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="84445c65-fbbf-4fd9-95ae-e2663f318bc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/content_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_addnews.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_addnews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +192,7 @@
       <workItem from="1589385326443" duration="12785000" />
       <workItem from="1589575089093" duration="9932000" />
       <workItem from="1589631513437" duration="11908000" />
-      <workItem from="1589662063929" duration="1934000" />
+      <workItem from="1589662063929" duration="3922000" />
     </task>
     <task id="LOCAL-00001" summary="Header değiştirildi.">
       <created>1585344145385</created>
@@ -377,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589655660492</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Birkez daha biçimsel iyileştirilmeler yapıldı.">
+      <created>1589664066002</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1589664066002</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +398,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Ckeditor eklendi." />
     <MESSAGE value="About us ve contact sayfaları oluşturuldu." />
     <MESSAGE value="Contact Form eklendi" />
     <MESSAGE value="Slider düzenlendi." />
@@ -410,7 +422,8 @@
     <MESSAGE value="Yeni üye olan kullanıcıya varsayılan bir image eklendi." />
     <MESSAGE value="Resim galerisi estetik hale getirildi." />
     <MESSAGE value="Biçimsel iyileştirmeler yapıldı." />
-    <option name="LAST_COMMIT_MESSAGE" value="Biçimsel iyileştirmeler yapıldı." />
+    <MESSAGE value="Birkez daha biçimsel iyileştirilmeler yapıldı." />
+    <option name="LAST_COMMIT_MESSAGE" value="Birkez daha biçimsel iyileştirilmeler yapıldı." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585343899639">
@@ -421,10 +434,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589638604707" />
-    <state x="651" y="14" key="CommitChangelistDialog2" timestamp="1589655659306">
+    <state x="651" y="14" key="CommitChangelistDialog2" timestamp="1589664065051">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="651" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589655659306" />
+    <state x="651" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589664065051" />
     <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1588575119053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -461,10 +474,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1588841030673" />
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1589655674098">
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1589664073157">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589655674098" />
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589664073157" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589662077301">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
