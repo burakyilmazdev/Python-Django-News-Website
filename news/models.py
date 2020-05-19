@@ -94,6 +94,12 @@ class Images(models.Model):
     image_tag.short_description = 'Image'
 
 
+class NewsImageForm(ModelForm):
+    class Meta:
+        model = Images
+        fields = ['title', 'image']
+
+
 class Comments(models.Model):
     STATUS = (
         ('True', 'Evet'),

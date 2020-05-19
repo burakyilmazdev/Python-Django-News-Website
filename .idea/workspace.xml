@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84445c65-fbbf-4fd9-95ae-e2663f318bc6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/uploads/images/gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/me3_RCfSFEU.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/p3_Jy2u48q.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/news_gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/faq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_addnews.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_addnews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/news_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/news_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/templates/user_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,17 +75,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/user/templates" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Django\project2\home\static\img" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Django\project2\home\templates" />
       <recent name="C:\Django\project2\user\templates" />
+      <recent name="C:\Django\project2\home\templates" />
       <recent name="C:\Django\project2\news" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Django\project2\uploads\images" />
+      <recent name="C:\Django\project2\uploads" />
+      <recent name="C:\Django\project2\home\static\img" />
     </key>
   </component>
   <component name="RunManager" selected="Python.models">
@@ -192,7 +198,10 @@
       <workItem from="1589385326443" duration="12785000" />
       <workItem from="1589575089093" duration="9932000" />
       <workItem from="1589631513437" duration="11908000" />
-      <workItem from="1589662063929" duration="3922000" />
+      <workItem from="1589662063929" duration="4215000" />
+      <workItem from="1589755195140" duration="613000" />
+      <workItem from="1589834902724" duration="211000" />
+      <workItem from="1589901905569" duration="8683000" />
     </task>
     <task id="LOCAL-00001" summary="Header değiştirildi.">
       <created>1585344145385</created>
@@ -390,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589664066002</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Bütün meta taglar dinamik yapıldı.">
+      <created>1589666261620</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1589666261620</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +414,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="About us ve contact sayfaları oluşturuldu." />
     <MESSAGE value="Contact Form eklendi" />
     <MESSAGE value="Slider düzenlendi." />
     <MESSAGE value="Kategori ve alt kategori menü işlemleri yapıldı." />
@@ -423,7 +438,8 @@
     <MESSAGE value="Resim galerisi estetik hale getirildi." />
     <MESSAGE value="Biçimsel iyileştirmeler yapıldı." />
     <MESSAGE value="Birkez daha biçimsel iyileştirilmeler yapıldı." />
-    <option name="LAST_COMMIT_MESSAGE" value="Birkez daha biçimsel iyileştirilmeler yapıldı." />
+    <MESSAGE value="Bütün meta taglar dinamik yapıldı." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bütün meta taglar dinamik yapıldı." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585343899639">
@@ -434,10 +450,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589638604707" />
-    <state x="651" y="14" key="CommitChangelistDialog2" timestamp="1589664065051">
+    <state x="651" y="14" key="CommitChangelistDialog2" timestamp="1589666260752">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="651" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589664065051" />
+    <state x="651" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589666260752" />
     <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1588575119053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -474,14 +490,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1588841030673" />
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1589664073157">
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1589666267108">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589664073157" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589662077301">
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589666267108" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589907208325">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589662077301" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589907208325" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589403934744">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

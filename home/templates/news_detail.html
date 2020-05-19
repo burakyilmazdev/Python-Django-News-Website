@@ -19,31 +19,31 @@
                 {{ news.detail | safe}}<br><br><br><br><br>
 
                 <div class="item-carousel" data-toggle="owlcarousel" data-owlcarousel-settings='{"items":4, "pagination":false, "navigation":true, "itemsScaleUp":true}'>
-                {% for rs in images %}
-                    <div class="item">
-                        <a class="overlay-wrapper">
-                            <img src="{{rs.image.url}}" height="500" width="500" alt="Project 1 image" class="img-responsive underlay">
+                    {% for rs in images %}
+                        <div class="item">
+                            <a class="overlay-wrapper">
+                                <img src="{{rs.image.url}}" height="500" width="500" alt="Project 1 image" class="img-responsive underlay">
 
-                        </a>
+                            </a>
 
-                    </div>
-                {% endfor %}
-
-
-            </div>
-
-
-        <br><br>
-                <div class="col-md-6">
-
-                    {% if messages %}
-                    {% for message in messages %}
-                        <div class="alert alert-{{ message.tags }}" role="alert">
-                            {{ message }}
                         </div>
                     {% endfor %}
 
-                {% endif %}
+
+                </div>
+
+
+                <br><br>
+                <div class="col-md-6">
+
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}" role="alert">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+
+                    {% endif %}
                     <h4 class="text-uppercase">
                         <b>Write a comment!</b>
                     </h4>

@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from content.models import Menu
 from home.models import UserProfile
-from news.models import Category, News, Comments, NewsForm
+from news.models import Category, News, Comments, NewsForm, NewsImageForm, Images
 from user.forms import UserUpdateForm, ProfileUpdateForm
 
 
@@ -176,3 +176,34 @@ def newsdelete(request, id):
     News.objects.filter(id=id, user_id=current_user.id).delete()
     messages.success(request, 'News has been deleted')
     return HttpResponseRedirect('/user/mynews')
+
+
+def newsaddimage(request, id):
+    if request.method == 'POST':
+        lasturl = request.META.get('HTTP_REFERER')
+        form = NewsImageForm(request.POST,request.FILES)
+
+        if form.is_valid():
+            data = Images()
+            data.title= form.cleaned_data['title']
+            data.news_id = id
+            data.image = form.cleaned_data['image']
+            data.save()
+            messages.success(request, 'Your image has been uploaded!')
+            return HttpResponseRedirect(lasturl)
+        else:
+            messages.warning(request, "Error")
+            return HttpResponseRedirect(lasturl)
+
+    else:
+        news = News.objects.get(id=id)
+        category = Category.objects.all()
+        images=Images.objects.filter(news_id=id)
+        form = NewsImageForm
+        context = {
+            'news': news,
+            'images': images,
+            'form': form,
+            'category':category,
+        }
+        return render(request, 'news_gallery.html', context)

@@ -13,6 +13,7 @@ urlpatterns = [
     path('newsedit/<int:id>', views.newsedit, name='newsedit'),
     path('newsdelete/<int:id>', views.newsdelete, name='newsdelete'),
     path('addnews/', views.addnews, name='addnews'),
+    path('newsaddimage/<int:id>',views.newsaddimage,name='newsaddimage'),
     # ex: /polls/5/
     # path('<int:question_id>/', views.detail, name='detail'),
 

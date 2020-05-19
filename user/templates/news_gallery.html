@@ -1,0 +1,28 @@
+<h3><b>{{ news.title }}</b></h3>
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+<form method="POST" role="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <input type="hidden" name="news_id" id="id_news_id" value={{ news.id }}>
+        <label for="id_title">Title:</label>
+    </div>
+    <div class="form-group">
+        <input class="input" type="text" name="title" placeholder="Title" maxlength="50" id="id_title"/>
+        <br><label for="id_image">Image:</label>
+    </div>
+    <div class="form-group">
+        <input type="file" class="input" name="image" id="id_image" placeholder="Image" accept="image/*"/>
+    </div>
+    <br><div class="text-center"><button type="submit">Upload Image</button></div>
+</form>
+<h3><b>Yüklenen Resimler</b></h3>
+{% for rs in images %}
+    <img src="{{ rs.image.url }}" height="200">
+{% endfor %}
