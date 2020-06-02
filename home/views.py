@@ -17,8 +17,8 @@ def index(request):
     sliderdata = News.objects.all()[:6]
     category = Category.objects.all()
     menu = Menu.objects.all()
-    lastnews = News.objects.all().order_by('-id')[:4]
-    randomnews = News.objects.all().order_by('?')[:4]
+    lastnews = News.objects.filter(status="True").order_by('-id')[:4]
+    randomnews = News.objects.filter(status="True").order_by('?')[:4]
     events = Content.objects.filter(type='etkinlik').order_by('-id')[:3]
     announcements = Content.objects.filter(type='duyuru').order_by('-id')[:3]
 
@@ -73,7 +73,7 @@ def contact(request):
 def category_news(request, id, slug):
     category = Category.objects.all()
     categorydata = Category.objects.get(pk=id)
-    news = News.objects.filter(category_id=id)
+    news = News.objects.filter(category_id=id,status="True")
     menu = Menu.objects.all()
     context = {'news': news,
                'category': category,

@@ -54,7 +54,8 @@ class Category(MPTTModel):
 class News(models.Model):
     STATUS = (
         ('True', 'Evet'),
-        ('False', 'Hayır')
+        ('New', 'Yeni'),
+        ('False', 'Hayır'),
     )
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
@@ -64,7 +65,7 @@ class News(models.Model):
     image = models.ImageField(blank=True, upload_to='images/')
     slug = models.SlugField(null=False, unique=True)
     detail = RichTextUploadingField()
-    status = models.CharField(max_length=10, choices=STATUS)
+    status = models.CharField(max_length=10, choices=STATUS, default='New')
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 

@@ -41,6 +41,7 @@
                             <th>Title</th>
                              <th>Gallery</th>
                             <th>Created Date</th>
+                            <th>Status</th>
 
                         </tr>
                         {% for rs in news %}
@@ -49,6 +50,7 @@
                                 <td rowcol-md-="2"><a href="/news/{{ rs.id }}/{{ rs.slug }}"> {{ rs.title }}</a></td>
                                 <td><a href="javascript:;" onclick="window.open('/user/newsaddimage/{{ rs.id }}','gallery','height:600,widht=800,top=50,left=150')"><img src="/uploads/images/gallery.png"></a> </td>
                                 <td>{{ rs.create_at }}</td>
+                                <td>{{ rs.status }}</td>
                                 <td><button type="button" class="btn btn-inverse"><a onclick="return confirm('Are you sure?')" href="/user/newsdelete/{{ rs.id }}">Delete</a></button></td>
                                 <td><button type="button" class="btn btn-inverse"><a href="/user/newsedit/{{ rs.id }}">Edit</a></button></td>
 

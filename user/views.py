@@ -75,7 +75,7 @@ def mynews(request):
     menu = Menu.objects.all()
     category = Category.objects.all()
     current_user = request.user
-    news = News.objects.filter(user_id=current_user)
+    news = News.objects.filter(user_id=current_user).order_by('-id')
     context = {
         'category': category,
         'news': news,
@@ -122,7 +122,7 @@ def addnews(request):
             data.category = form.cleaned_data['category']
             data.slug = form.cleaned_data['slug']
             data.detail = form.cleaned_data['detail']
-            data.status = 'False'
+            data.status = 'New'
             data.save()
             messages.success(request, 'Your news has been added!')
             return HttpResponseRedirect('/user/mynews')
