@@ -90,7 +90,7 @@ def comments(request):
     menu = Menu.objects.all()
     category = Category.objects.all()
     current_user = request.user
-    comments = Comments.objects.filter(user_id=current_user)
+    comments = Comments.objects.filter(user_id=current_user).order_by('-id')
     context = {
         'category': category,
         'comments': comments,

@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84445c65-fbbf-4fd9-95ae-e2663f318bc6" name="Default Changelist" comment="User menüsüne haber resim galerisi eklendi.">
-      <change afterPath="$PROJECT_DIR$/news/migrations/0015_auto_20200602_1428.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2680507_810x458_dxA0O2z.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2680507_810x458_lqdi5yd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/5e89827f5542840300e0dc64_w0CnYYA.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/5eaeae815cf3b014a455bbd7_isNxIkX.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/5eaeae815cf3b014a455bbd7_j0ndxEE.jpg" afterDir="false" />
+    <list default="true" id="84445c65-fbbf-4fd9-95ae-e2663f318bc6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/uploads/images/47841_hizli-ve-ofkeli-9un-ilk-fragmani-yayinlandi_original_Vw6SFmM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/md_b9ittvS.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,15 +75,15 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Django\project2\user\templates" />
-      <recent name="C:\Django\project2\home\templates" />
-      <recent name="C:\Django\project2\news" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Django\project2\uploads\images" />
       <recent name="C:\Django\project2\uploads" />
       <recent name="C:\Django\project2\home\static\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Django\project2\user\templates" />
+      <recent name="C:\Django\project2\home\templates" />
+      <recent name="C:\Django\project2\news" />
     </key>
   </component>
   <component name="RunManager" selected="Python.models">
@@ -208,7 +203,9 @@
       <workItem from="1590984001942" duration="223000" />
       <workItem from="1590993487782" duration="1751000" />
       <workItem from="1591018070614" duration="73000" />
-      <workItem from="1591081108720" duration="3705000" />
+      <workItem from="1591081108720" duration="3741000" />
+      <workItem from="1591135784177" duration="1446000" />
+      <workItem from="1591206363670" duration="2308000" />
     </task>
     <task id="LOCAL-00001" summary="Header değiştirildi.">
       <created>1585344145385</created>
@@ -420,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589922011249</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Düzenlemeler yapıldı.">
+      <created>1591097882202</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1591097882202</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +432,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Slider düzenlendi." />
     <MESSAGE value="Kategori ve alt kategori menü işlemleri yapıldı." />
     <MESSAGE value="Anasayfaya son dakika haberleri ve haberler eklendi." />
     <MESSAGE value="Haber detay sayfası oluşturuldu ve haberlere resim galerisi eklendi." />
@@ -453,7 +456,8 @@
     <MESSAGE value="Birkez daha biçimsel iyileştirilmeler yapıldı." />
     <MESSAGE value="Bütün meta taglar dinamik yapıldı." />
     <MESSAGE value="User menüsüne haber resim galerisi eklendi." />
-    <option name="LAST_COMMIT_MESSAGE" value="User menüsüne haber resim galerisi eklendi." />
+    <MESSAGE value="Düzenlemeler yapıldı." />
+    <option name="LAST_COMMIT_MESSAGE" value="Düzenlemeler yapıldı." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585343899639">
@@ -464,10 +468,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589638604707" />
-    <state x="651" y="14" key="CommitChangelistDialog2" timestamp="1589922014785">
+    <state x="651" y="14" key="CommitChangelistDialog2" timestamp="1591097881029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="651" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589922014785" />
+    <state x="651" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591097881029" />
     <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1588575119053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -504,14 +508,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1588841030673" />
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1589922021782">
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2" timestamp="1591097890037">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589922021782" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591018135096">
+    <state x="755" y="0" width="781" height="824" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591097890037" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591206363279">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591018135096" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591206363279" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589403934744">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -41,6 +41,7 @@
                             <th>Subject</th>
                             <th>Comment</th>
                             <th>Date</th>
+                            <th>Status</th>
 
                         </tr>
                         {% for rs in comments %}
@@ -54,6 +55,8 @@
                                 <td>{{ rs.comment }}</td>
 
                                 <td>{{ rs.create_at }}</td>
+
+                                <td>{{ rs.status }}</td>
 
                                 <td><button type="button" class="btn btn-inverse"><a href="/user/deletecomment/{{ rs.id }}" onclick="return confirm('Are you sure?')">Sil</a> </button></td>
                             </tr>
