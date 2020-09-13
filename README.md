@@ -2,7 +2,7 @@
 
 A news website that users can share news. Python django framework was used. 
 
-Kullanılıcıların haber paylaşabildikleri bir haber sitesidir. Python django framework'ü kullanılmıştır.
+Kullanıcıların haber paylaşabildikleri bir haber sitesidir. Python django framework'ü kullanılmıştır.
 
 
 ![N2](https://user-images.githubusercontent.com/45144910/93015893-d474ac80-f5c5-11ea-80ce-65ed58a9042a.png)
